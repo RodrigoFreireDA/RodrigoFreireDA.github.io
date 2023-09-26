@@ -6,17 +6,19 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 <head>
-   <title>Portfolio | Rodrigo Freire</title>
+    <head>
+    <title>Portfolio | Rodrigo Freire</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    
+
     <!-- Open Graph meta tags for image preview -->
     <meta property="og:title" content="Portfolio | Rodrigo Freire">
     <meta property="og:description" content="Business Intelligence Projects">
     <meta property="og:image" content="https://imgur.com/a/ZJnZwYM"> <!-- URL to your image -->
     <meta property="og:url" content="https://rodrigofreireda.github.io/#">
+
     <style>
         /* Centered text styles */
         .centered-text {
@@ -65,7 +67,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 		/* CSS for the project info container */
 .project-info {
-    position: relative;
+    position: relative;a
     overflow: hidden; /* Hide overflow to cover the entire image */
 }
 
@@ -74,7 +76,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     position: absolute;
     background: rgba(0, 0, 0, 0.9);
     color: white;
-    padding: 50px;
+    padding: 20px; /* Added padding */
     border-radius: 5px;
     top: 0;
     left: 0;
@@ -84,9 +86,11 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s; /* Smooth transition for opacity */
     display: flex; /* Use flexbox */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Display elements in a column */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
 }
+
 
 
 /* Show project description on hover */
@@ -109,12 +113,22 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     box-sizing: border-box;
 }
 
-/* CSS for the project container */
-.project-container {
+/* Style for the tool-icons container */
+.tool-icons {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust as needed for spacing */
+    justify-content: center; /* Center horizontally */
+    /* Set a fixed width for the container if needed */
 }
+
+/* Style for individual tool icons within the .tool-icons container */
+.tool-icons img {
+    width: auto; /* Set the desired width for the icons */
+    height:100px; /* Maintain aspect ratio */
+    margin: 100px; /* Add spacing between the icons */
+    border-radius: 15px; /* Add rounded corners */
+}
+
+
 
 
 
@@ -158,37 +172,61 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <header>
                 <h2>Projects</h2>
             </header>
-            <section class="project-container">
-				<div class="col-6 col-6-medium col-12-small project project-item">
-					<h6 class="project-title">Google Data Analytics Project</h6>
-					<div class="project-info">
-        				<a href="https://github.com/RodrigoFreireDA/side_projects/tree/main/2.%20Google%20Capstone%20Project%20-%20Cyclistic" target="_blank" class="image fit">
-           				 <img src="images/Cyclistic.jpg" alt="">
-           				 	<div class="project-description">
-                			This project follows the successful conclusion of my Google Data Analytics Professional Certificate. It is an excellent opportunity to show the skills acquired throughout the course, such as cleaning, analysing and presenting the data. My goal was to analyse historical bike trip data in order to understand the differences between casual riders and annual members.
-            				</div>
-        				</a>
-   				</div>
+            <div class="col-6 col-6-medium col-12-small project project-item">
+                <h6 class="project-title">Google Data Analytics Project</h6>
+                <div class="project-info">
+                    <a href="https://github.com/RodrigoFreireDA/side_projects/tree/main/2.%20Google%20Capstone%20Project%20-%20Cyclistic" target="_blank" class="image fit">
+                    <img src="images/Cyclistic.jpg" alt="">
+                <div class="project-description">
+                        <div>
+                            <p>
+                            This project follows the successful conclusion of my Google Data Analytics Professional Certificate. It is an excellent opportunity to show the skills acquired throughout the course, such as cleaning, analyzing, and presenting the data. My goal was to analyze historical bike trip data in order to understand the differences between casual riders and annual members.
+                            </p>
+                        </div>
+                <div>
+                    <p class="tool-icons">
+                    <img src="images/PowerBI.jpg" style="width: 100px; padding: 10px; border-radius: 15px; float: left;">
+                    <img src="images/Python.png" style="width: 100px; padding: 10px; border-radius: 15px; float: left;">
+                    <img src="images/SQL.jpg" style="width: 100px; padding: 10px; border-radius: 15px; float: left;">
+                    <div style="clear: both;"></div> <!-- Add a clearing element to prevent overlap -->
+                    </p>
 
-				<div style="margin-bottom: 100px;"></div> <!-- Add this empty div for spacing -->
-
-				<div class="col-6 col-6-medium col-12-small project project-item">
-					<h6 class="project-title">Spotify | Data Analysis</h6>
-					<div class="project-info">
-        				<a href="https://github.com/RodrigoFreireDA/side_projects/tree/main/1.%20Spotify" target="_blank" class="image fit">
-           				 <img src="images/spotify1.png" alt="">
-           				 	<div class="project-description">
-                			This project involved analyzing data from Spotify
-            				</div>
-        				</a>
-   					 </div>
                 </div>
+                </div>
+                </div>
+                    </a>
+            </div>
 
 				<div style="margin-bottom: 100px;"></div> <!-- Add this empty div for spacing -->
 
+
+            <div class="col-6 col-6-medium col-12-small project project-item">
+                <h6 class="project-title">Spotify | Data Analysis</h6>
+                <div class="project-info">
+                    <a href="https://github.com/RodrigoFreireDA/side_projects/tree/main/1.%20Spotify" target="_blank" class="image fit">
+                    <img src="images/spotify1.png" alt="">
+                <div class="project-description">
+                        <div>
+                            <p>
+                            This project involved analyzing data from Spotify
+                            </p>
+                        </div>
+                <div>
+                    <p class="tool-icons">
+                    <img src="images/Python.png" style="width: 100px; padding: 10px; border-radius: 15px; float: left;">
+                    <div style="clear: both;"></div> <!-- Add a clearing element to prevent overlap -->
+                    </p>
+                </div>
+                </div>
+                </div>
+            </div>
+
+
+				<div style="margin-bottom: 100px;"></div> <!-- Add this empty div for spacing -->
 
 
             </section>
+
         </article>
 
         <!-- Contact -->
